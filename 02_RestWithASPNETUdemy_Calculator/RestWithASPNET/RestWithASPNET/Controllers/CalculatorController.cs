@@ -84,12 +84,12 @@ namespace RestWithASPNET.Controllers
             return BadRequest("Invalid Input");
         }
 
-        [HttpGet("med/{firstMedNumber}/{secondMedNumber}")]
-        public IActionResult Medium(string firstMedNumber, string secondMedNumber)
+        [HttpGet("ave/{firstAveNumber}/{secondAveNumber}")]
+        public IActionResult Average(string firstAveNumber, string secondAveNumber)
         {
-            if (IsNumeric(firstMedNumber) && IsNumeric(secondMedNumber))
+            if (IsNumeric(firstAveNumber) && IsNumeric(secondAveNumber))
             {
-                var sum = ConvertToDecimal(firstMedNumber) + ConvertToDecimal(secondMedNumber);
+                var sum = ConvertToDecimal(firstAveNumber) + ConvertToDecimal(secondAveNumber);
                 var med = sum / 2;
                 return Ok(med.ToString());
             }
