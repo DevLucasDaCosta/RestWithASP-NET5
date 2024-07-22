@@ -27,8 +27,6 @@ namespace RestWithASPNET.Services.Implementations
             return persons;
         }
 
-        
-
         public Person FindById(long id)
         {
             return new Person
